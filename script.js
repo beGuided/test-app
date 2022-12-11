@@ -1,15 +1,15 @@
 var pos = 0, test, test_status, questions,  choice, choices, chA, chB, chC, correct = 0; 
 	var questions = [
-		["Who created python flask?", "Armin Ronacher", "Jude Suares", "Adrian Mercurio", "A" ],
-		["Who created javascript?", "Brendan Eich", "Kimmy Matillano", "Saxon Ong", "A"],
-		["Who created java?", "James Gosling", "Princely Ceasar", "July King Kadayuna", "A"],
-		["Who created c# language?", "Microsoft Corporation", "Google Company", "You Tube Corporation", "A"],
-		["Who created php?", "Rasmus Lerdorf", "Grace Patulada", "Nikko Curaza", "A"],
-		["Who created itsourcecode.com?", "Charlotte Villanueva", "Joken Villanueva", "Niko Embang", "B"],
-		["Who created laravel?", "Boknoi Villaflor", "Taylor Otwell", "Ryan Manaay", "B"],
-		["Who created database?", "Edgar Frank Codd", "Paul Niar", "Given Bariacto", "A"],
-		["Who created c++ language?", "Kirk Eriman", "Bjarne Stroustrup", "Jomhel Dulla", "B"],	
-		["Who created c language?", "Dennis Ritchie", "Daniel Bandiola", "Carlan Pellobello", "A"]
+		["The following are woodwork maintenance safety tips asides ?", "Wear safety Glasses", "Leave nails and screw littering the work environment", "Avoid Drugs and Alcohol", "B" ],
+		["What is woodwork machine in basic technology ?", "Machines intended for use with metal ", "Machines intended for the processing of wood ", " Machine used to create a computer", "B"],
+		["The following are common maintenance problems except?", "Identification ", "Cause/effect", "Perfect working conditioned tool", "C"],
+		["What is tool and Equipment, maintenance?", "Any process used to keep and care for equipment, machine or tools", "Machines intended for bending", "A processing tool", "A"],
+		["Which of the following is not a maintenance strategy ", "Condition-based maintenance", "Corrective maintenance ", "Corrosive maintenance ", "C"],
+		["Examples of routine maintenance include", "Replacing parts that show deterioration ", "Lubricating, cleaning, or adjusting machinery", "All of the above", "C"],
+		["Fundamental skills every woodworker should possess include? ", "Understand how, wood works and behave ", "Complete Every job/ furniture, you have begun", "None of the above", "C"],
+		["Tips to enhancing maintenance management system includes ?", "Keep maintenance track ", "Move to automated process ", "Keep tools untidy", "C"],
+		["The following are list of woodwork tools asides?", "Coping saw", "Keyboard ", "All of the above ", "B"],	
+		["The following are classes of  woodwork hand tools except__", "Boring tools", "Measuring tools ", "A & B", "C"]
 	];
 	function _(x){
 		return document.getElementById(x);
@@ -17,7 +17,7 @@ var pos = 0, test, test_status, questions,  choice, choices, chA, chB, chC, corr
 	function renderQuestion(){
 		test = _("test");
 		if(pos >= questions.length){
-			test.innerHTML = "<h3>You got "+correct+" of "+questions.length+" questions correct</h3>" + "<br> PROJECT BY ONAJITE ODIOKO <br> Mat NO:EDU1812151, SUPERVISOR NAME: , PROJECT TITLE";
+			test.innerHTML = "<h3>You got "+correct+" of "+questions.length+" questions correct</h3>" + "<br> PROJECT BY : Akpevwe Onajite ODIOKO <br> Mat NO: EDU1812288 <br> SUPERVISOR NAME: DR OGUNTUNDE ";
 			_("test_status").innerHTML = "Exam Completed";
 			pos = 0;
 			correct =0;
@@ -44,9 +44,13 @@ var pos = 0, test, test_status, questions,  choice, choices, chA, chB, chC, corr
 				choice = choices[i].value;
 			}
 		}
+
+		if(choice !=questions[pos][4]){
+			alert("cottect answer is " + questions[pos][4]);
+		}
 		if (choice == questions[pos][4]){
 			correct++;
-			alert("cottect answer is"+ questions[pos][4]);
+			
 		}
 		pos++;
 		renderQuestion();
